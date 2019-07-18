@@ -8,8 +8,8 @@ contract Cypher {
          notebook[msg.sender][_key] = _value;
     }
 
-    function find(string memory _key) public returns (string memory) {
-        return notebook[msg.sender][_key];
+    function find(address _owner, string memory _key) public view returns (string memory) {
+        return notebook[_owner][_key];
     }
 
 }
